@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue_custom">
+
+    <TextView
+        android:id="@+id/tvInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="@string/detail"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:theme="@style/TextViewWhiteStyle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvNameFirst"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/name"
+        android:textSize="20sp"
+        android:theme="@style/TextViewWhiteStyle"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="@+id/tvInfo"
+        app:layout_constraintStart_toStartOf="@+id/tvInfo"
+        app:layout_constraintTop_toBottomOf="@+id/tvInfo" />
+
+    <TextView
+        android:id="@+id/tvNameLast"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/name2"
+        android:textSize="20sp"
+        android:theme="@style/TextViewWhiteStyle"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="@+id/tvNameFirst"
+        app:layout_constraintStart_toStartOf="@+id/tvNameFirst"
+        app:layout_constraintTop_toBottomOf="@+id/tvNameFirst" />
+
+    <TextView
+        android:id="@+id/tvPhoneNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/numbers"
+        android:textSize="20sp"
+        android:textStyle="italic"
+        android:theme="@style/TextViewWhiteStyle"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="@+id/tvNameLast"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="@+id/tvNameLast"
+        app:layout_constraintTop_toBottomOf="@+id/tvNameLast" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnEdit"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/card_custom_view"
+        android:text="@string/editText"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        android:theme="@style/TextViewWhiteStyle"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="@+id/tvInfo"
+        app:layout_constraintStart_toStartOf="@+id/tvInfo"
+        app:layout_constraintTop_toBottomOf="@+id/tvPhoneNumber" />
+
+    <EditText
+        android:id="@+id/edFirstName"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="@string/inputName"
+        android:inputType="textPersonName"
+        android:shadowColor="@color/black"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:theme="@style/TextViewWhiteStyle"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/tvInfo"
+        app:layout_constraintStart_toStartOf="@+id/tvInfo"
+        app:layout_constraintTop_toBottomOf="@+id/tvInfo" />
+
+    <EditText
+        android:id="@+id/edLastName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="@string/inputLastName"
+        android:inputType="textPersonName"
+        android:shadowColor="@color/black"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:theme="@style/TextViewWhiteStyle"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/edFirstName"
+        app:layout_constraintStart_toStartOf="@+id/edFirstName"
+        app:layout_constraintTop_toBottomOf="@+id/edFirstName" />
+
+    <EditText
+        android:id="@+id/edPhoneNumber"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="@string/inputNumber"
+        android:inputType="phone"
+        android:shadowColor="@color/black"
+        android:textColor="@color/white"
+        android:textColorHighlight="@color/white"
+        android:textColorHint="@color/white"
+        android:textColorLink="@color/white"
+        android:theme="@style/TextViewWhiteStyle"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/edLastName"
+        app:layout_constraintStart_toStartOf="@+id/edLastName"
+        app:layout_constraintTop_toBottomOf="@+id/edLastName" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnSave"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/card_custom_view"
+        android:text="@string/save"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        android:theme="@style/TextViewWhiteStyle"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/edPhoneNumber"
+        app:layout_constraintStart_toStartOf="@+id/edPhoneNumber"
+        app:layout_constraintTop_toBottomOf="@+id/edPhoneNumber" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

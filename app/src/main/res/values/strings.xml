@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Контакты</string>
+    <string name="phone">+37529358432</string>
+    <string name="lastName">Газманов</string>
+    <string name="firstName">Олег</string>
+    <string name="detail">Детали</string>
+    <string name="name">Николай</string>
+    <string name="name2">Басков</string>
+    <string name="numbers">375292348534</string>
+    <string name="editText">Редактировать</string>
+    <string name="inputName">Введите имя</string>
+    <string name="inputLastName">Введите фамилию</string>
+    <string name="inputNumber">Введите номер телефона</string>
+    <string name="save">Сохранить</string>
+</resources>
