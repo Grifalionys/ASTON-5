@@ -58,10 +58,18 @@ public class ListFragment extends Fragment {
                         contact.getId()
                 );
                 FragmentManager fragmentManager = requireActivity().getSupportFragmentManager();
-                fragmentManager.beginTransaction()
-                        .replace(R.id.fragment_container,detailFragment)
-                        .addToBackStack("contacts")
-                        .commit();
+
+                if(view.findViewById(R.id.fragmentTablet) != null){
+                    fragmentManager.beginTransaction()
+                            .replace(R.id.fragmentTablet,detailFragment)
+                            .addToBackStack("contacts")
+                            .commit();
+                } else {
+                    fragmentManager.beginTransaction()
+                            .replace(R.id.fragment_container,detailFragment)
+                            .addToBackStack("contacts")
+                            .commit();
+                }
             }
         });
     }

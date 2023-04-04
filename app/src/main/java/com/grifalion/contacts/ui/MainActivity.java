@@ -8,6 +8,7 @@ import androidx.fragment.app.FragmentTransaction;
 import android.os.Bundle;
 
 import com.grifalion.contacts.R;
+import com.grifalion.contacts.ui.fragments.DetailFragment;
 import com.grifalion.contacts.ui.fragments.ListFragment;
 
 public class MainActivity extends AppCompatActivity {

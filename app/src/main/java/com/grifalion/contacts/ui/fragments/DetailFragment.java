@@ -7,14 +7,10 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
-
 import com.grifalion.contacts.DownloadListenear;
 import com.grifalion.contacts.R;
 import com.grifalion.contacts.model.Contact;
@@ -23,9 +19,9 @@ import com.grifalion.contacts.ui.viewmodel.MainViewModel;
 public class DetailFragment extends Fragment implements DownloadListenear {
     private static final String ID_KEY = "ID_KEY";
     private int id;
-    TextView firstName;
-    TextView lastName;
-    TextView numberPhone;
+    private TextView firstName;
+    private TextView lastName;
+    private TextView numberPhone;
 
     private MainViewModel model;
 
@@ -124,6 +120,4 @@ public class DetailFragment extends Fragment implements DownloadListenear {
     public void dataDownloadFailed() {
 
     }
-
-
 }
